@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 0; i < 100 /*100是打开网站数量可随意更改*/ ; i++)
+            {
+
+                System.Diagnostics.Process.Start("https://mooc1-1.chaoxing.com/mycourse/studentstudy?chapterId=415824765&courseId=217281319&clazzid=38595475&enc=757a7d04178d9a528f8616ded9753968");
+                System.Threading.Thread.Sleep(10000);/*10000是延迟时间为10s不建议更改*/
+                Console.WriteLine("已打开{0}次", i);
+                //目前知道如何关闭打开窗口需要在程序运行完之后手动关闭打开的网站
+            }
+        }
+    }
+}
